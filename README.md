@@ -41,3 +41,9 @@ The OpenAI-evals format is the following:
     "ideal": the answer
 }
 ```
+
+## Evaluation 
+
+An example method of using the dataset to evaluate language models is the method used in the [Icelandic LLM leaderboard](https://huggingface.co/spaces/mideind/icelandic-llm-leaderboard). A GPT model is used as an evaluator to compare a generated answer to the original answer for semantic similarity and rate the answer on a scale of (0, "poor"), (0.5, "fair") and (1, "excellent").
+
+BIG-bench and OpenAI-evals are limited to certain available evaluation metrics. Within BIG-bench, a ROUGE-L score is returned when using the gold dataset to evaluate models and within OpenAI-evals, fuzzy match is used.
